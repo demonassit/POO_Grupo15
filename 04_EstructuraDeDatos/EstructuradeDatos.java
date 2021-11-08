@@ -39,17 +39,20 @@ class EstructuradeDatos{
 
         //objetos
         Scanner entrada = new Scanner(System.in);
-        //Scanner socio = new Scanner(System.in);
+        //Scanner letras = new Scanner(System.in);
 
 
         //variables
         int edad, opcion, socio;
         double precio, bono;
+        char letras;
 
 
         //cuerpo del programa
 
         //menu de las opciones de arriba
+
+        do{
 
         System.out.println("Bienvenido a tu primer programa de estructuras.");
         System.out.println("Por favor elija la opcion deseada:");
@@ -90,8 +93,8 @@ class EstructuradeDatos{
                 }
                 /*
                 SI LA EDAD ES MENOR QUE 21, SE PREGUNTA AL USUARIO SI SUS PADRES SON 
-    SOCIOS. SI LA RESPUESTA ES AFIRMATIVA, SE LES APLICA UN DESCUENTO DEL 
-    45%; EN CASO CONTRARIO, SE LES APLICA UN 25%. 
+                 SOCIOS. SI LA RESPUESTA ES AFIRMATIVA, SE LES APLICA UN DESCUENTO DEL 
+                45%; EN CASO CONTRARIO, SE LES APLICA UN 25%. 
                 */ 
                 if(edad <= 21){
                     System.out.println("Si tus padres son socios ingresa 1, sino lo son ingresa 2");
@@ -150,5 +153,26 @@ class EstructuradeDatos{
 
 
         }
+    
+        System.out.println("¿Deseas repetir el programa? Si lo desea escriba s");
+        /*
+            para recibir la respuesta debo de obtener un caracter s
+            para cuando se reciben char se utiliza ''
+            para cuando se reciben String se utiliza ""
+        */ 
+    
+        letras = entrada.next().charAt(0);
+    
+        //si el usuario ingresa si  solo detecto la s  es la posicion del caracter que queremos lee
+    
+    
+    
+    
+    }while(letras == 's');
+    //aqui se cierra el do
+
+   
+
     }
+
 }
