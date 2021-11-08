@@ -17,6 +17,7 @@ num1 num2 resultado
 //vamos a ocupar la libreria Scanner que nos sirve para obtener la entrada de datos
 
 import java.util.Scanner;
+import java.util.Math;
 
 class sumadedosnumeros{
 
@@ -58,5 +59,7 @@ class sumadedosnumeros{
        }while(num1 !=0);
         
        System.out.println("El resultado de la suma es: " + resultado);
+
+
     }
 }
