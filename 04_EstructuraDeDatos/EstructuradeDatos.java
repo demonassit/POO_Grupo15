@@ -43,9 +43,10 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio;
+        int edad, opcion, socio, numbinario;
         double precio, bono;
         char letras;
+        String binario = "";
 
 
         //cuerpo del programa
@@ -123,8 +124,39 @@ class EstructuradeDatos{
 
                 case 2:
 
+                    System.out.println("Ingrese un numero positivo entero que desee convertir a binario");
+                    numbinario = entrada.nextInt();
+                    /*
+                    Tengo que comprobar que sea positivo?
+                    condicion donde numbinario > 0
+                    entonces aplico el algoritmo de convertir a binario
+                    sino no se puede convertir
+                    */ 
+
+                    if(numbinario > 0){
+                        /*
+                        Como el algoritmo para convertir un numero decimal en binario
+                        aplicar al numbinario mod 2
+                        */
+                        while(numbinario > 0){
+                            if(numbinario % 2 == 0){
+                                binario = "0" + binario;
+                            }else{
+                                binario = "1" + binario;
+                            }
+                            numbinario = (int)numbinario / 2;
+                        }
+                    }else if (numbinario == 0){
+                        binario = "0";
+                    }else{
+                        binario = "No se pudo convertir el numero, ingrese solo positivos.";
+                    }
+                    System.out.println("El numero convertirdo a binario es: " + binario);
+                    break;
+
 
                 case 3:
+                    //tarea
 
                 case 4:
 
@@ -135,6 +167,7 @@ class EstructuradeDatos{
                 case 7: 
 
                 case 8:
+                    //tarea de ustedes
 
                 case 9:
 
@@ -142,6 +175,7 @@ class EstructuradeDatos{
                 case 10:
 
                 case 11:
+                    //tarea
 
                 case 12:
 
