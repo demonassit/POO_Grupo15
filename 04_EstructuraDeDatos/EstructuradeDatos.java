@@ -43,9 +43,14 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio, numbinario;
+        int edad, opcion, socio, numbinario, total, numerototal;
+        int positivos = 0;
+        int negativos = 0;
         double precio, bono;
         char letras;
+        float precios = 0;
+        float resultado = 0;
+        int cantidad = 0; 
         String binario = "";
 
 
@@ -160,9 +165,63 @@ class EstructuradeDatos{
 
                 case 4:
 
+                    /*
+                    Un numero positivo y un num negativo
+                    entonces para poder identificar si un numero positivo o negativo
+                    debo de poder diferenciar si es 
+                    num > 0
+                    */ 
+
+                    System.out.println("Inserte ¿cuantos numeros va a ingresar?");
+                    total = entrada.nextInt();
+
+                    do{
+                        System.out.println("Inserte el numero");
+                        numerototal = entrada.nextInt();
+
+                        //condicion
+                        if(numerototal == 0){
+                            //contar cuantos positivos hubo
+                            //vamos a ir acumulando el numero de positivos
+                            positivos = positivos + 0;
+
+                        }else{
+                            if(numerototal > 0){
+                                positivos = positivos +1;
+                            }else{
+                                negativos = negativos +1;
+                            }
+                        }
+
+                        //saber el total
+                        total = total-1;
+
+
+
+                    }while(total != 0);
+
+                    System.out.println("El total de positivos es: "+ positivos);
+                    System.out.println("El total de negativos es: "+ negativos);
+
+                    break;
+
                 case 5:
+                    System.out.println("¿Cuantos elementos vas a ingresar?");
+                    total = entrada.nextInt();
+
+                    for(int i = 1; i <= total; i++){
+                        System.out.println("Ingresa el Precio producto");
+                        precios = entrada.nextFloat();
+                        System.out.println("Ingresa el Cantidad del Producto");
+                        cantidad = entrada.nextInt();
+
+                        resultado = precios * cantidad;
+                    }
+
+                    System.out.println("El resultado es: " + resultado);
 
                 case 6:
+                    //tarea
 
                 case 7: 
 
@@ -178,6 +237,7 @@ class EstructuradeDatos{
                     //tarea
 
                 case 12:
+                    //tarea
 
                 case 13:
 
