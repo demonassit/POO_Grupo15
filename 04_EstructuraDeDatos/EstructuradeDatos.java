@@ -43,11 +43,11 @@ class EstructuradeDatos{
 
 
         //variables
-        int edad, opcion, socio, numbinario, total, numerototal;
+        int edad, opcion, socio, numbinario, total, numerototal, n, a, b;
         int positivos = 0;
         int negativos = 0;
         double precio, bono;
-        char letras;
+        char letras, operacion;
         float precios = 0;
         float resultado = 0;
         int cantidad = 0; 
@@ -224,14 +224,100 @@ class EstructuradeDatos{
                     //tarea
 
                 case 7: 
+                    for(n = 1; n<= 10; n++){
+                        System.out.println(n + " " + (n*10)+ " " + (n*100) + " " + (n*1000));
+                    }
+                    break;
 
                 case 8:
                     //tarea de ustedes
+                    /*
+                    introduce el digito
+                    for (num ; iterador >0; i--)
+                    factorial = factorial * iterador
+                    
+                    
+                    while(num == 1){
+                        factorial = factorial - 1
+                    }
+
+
+                    */ 
 
                 case 9:
+                    /*
+                    ESCRIBA UN PROGRAMA QUE LEA EL LADO DE UN CUADRADO Y A CONTINUACIÓN LO IMPRIMA 
+                    EN FORMA DE ASTERISCOS SU PROGRAMA DEBERa PODER FUNCIONAR PARA CUADRADOS 
+                    DE TODOS TAMAÑOS ENTRE 1 Y 20. 
+                    */
+
+                    System.out.println("Cuadrado Magico");
+                    System.out.println("Inserta el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede imprimir
+                        //aqui tengo las filas
+                        for(int i = 1; i<=n; i++){
+                            //columnas
+                            for(int j = 1; j<=n; j++){
+                                System.out.print("* ");
+
+                            }
+                        System.out.println(" ");
+
+
+                            
+                        }
+                    }else{
+                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
+                    break;
+
 
 
                 case 10:
+
+                    System.out.println("Cuadrado Magico Hueco (Como tu ex asi dejo tu kokoro wiiii)");
+                    System.out.println("Inserta el num de lados: ");
+                    n = entrada.nextInt();
+
+                    if( n>= 1 && n <=20){
+                        //se puede imprimir
+
+                        //imprima la linea superior
+                        for(int i = 0; i < n; i++){
+                            System.out.print(" * ");
+                        }
+                        System.out.println();
+
+                        //lo de enmedio solo quiero las esquinas
+                        //cuadrado interno
+                        //aqui tengo las filas
+                        for(int i = 0; i < n-2; i++){
+                            System.out.print(" * ");
+                            //columnas
+                            for(int j = 0; j < n-2; j++){
+                                System.out.print("  ");
+
+                            }
+                        System.out.println("   * ");
+
+
+                            
+                        }
+
+                        //imprimir la linea inferior
+                        for(int i = 0; i < n; i++){
+                            System.out.print(" * ");
+                        }
+                        System.out.println();
+                    }else{
+                        System.out.println("Error, el rango debe de ser entre 1 y 20, intente de nuevo");
+                    }
+
+                    break;
 
                 case 11:
                     //tarea
@@ -240,6 +326,49 @@ class EstructuradeDatos{
                     //tarea
 
                 case 13:
+
+                    System.out.println("Calculadora maizsoro");
+                    System.out.println("Ingresar un número");
+                    a = entrada.nextInt();
+                    System.out.println("Ingresa un segundo número");
+                    b = entrada.nextInt();
+                    System.out.println("Ingresa el tipo de operacion que deseas realizar : (+ , -, *, /)");
+                    operacion = entrada.next().charAt(0);
+
+                    /*
+                    switch 
+                        case +
+                        case -
+                        case *
+                        case /
+                    */ 
+
+                    switch(operacion){
+                        case '+' :
+                            resultado = a+b;
+                            System.out.println("La suma es de: " + resultado);
+                            break;
+                        case '-' :
+                            resultado = a-b;
+                            System.out.println("La resta es de: " + resultado);
+                            break;
+                        case '*' :
+                            resultado = a*b;
+                            System.out.println("La multiplicación es de: " + resultado);
+                            break;
+                        case '/' :
+                            if(b != 0){
+                                resultado = a/b;
+                                System.out.println("La división es de: " + resultado);
+                               
+                            }else{
+                                System.out.println("No es posible dividir entre 0");
+                            }
+                            break;
+                        default :
+                            System.out.println("Operación no valida");
+
+                    }
 
                 default:
                     System.out.println("Gracias por ver este hermoso programa :3");
