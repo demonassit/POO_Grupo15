@@ -2,7 +2,7 @@
 
 
 import java.util.*;
-import AccionesPersona;
+//import AccionesPersona;
 
 
 

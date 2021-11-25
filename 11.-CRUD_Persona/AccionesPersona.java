@@ -5,7 +5,7 @@ manipular los datos)
 */
 
 import java.util.ArrayList;
-import Persona;
+//import Persona;
 
 
 // vamos a hacer el CRUD de personas
