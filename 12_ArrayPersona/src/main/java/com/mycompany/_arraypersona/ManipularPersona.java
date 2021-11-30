@@ -41,7 +41,7 @@ public class ManipularPersona {
                     //recorro el objeto de personas para mostrarlo
                     for(Persona objeto : listadepersonas){
                         System.out.println("El id: " + objeto.getId()
-                                           + " El nombre es: " + objeto.getNombre()
+                                           + " El nombre es: " + objeto.getNombre()+"\n"
                                            + " La edad es: " + objeto.getEdad()+"\n");
                     }
                     break;
