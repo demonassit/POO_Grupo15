@@ -1,1 +1,6 @@
-Hola esto es un ejemplo
+<html>
+<head>
+<title>Hola</title>
+</head>
+<body>Otro ejemplo y cambios</body>
+</html>
