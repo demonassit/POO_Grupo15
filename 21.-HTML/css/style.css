@@ -3,4 +3,33 @@
     margin : 0;
     color : #50af60;
     text-align: center;
+    font-size: 24px;
+    font-family: 'Calibre';
+}
+
+
+html, body{
+    background-color: blue;
+}
+
+.main-container{
+    border: 4px solid rgb(255, 122, 0);
+    border-radius: 20px;
+    margin: 2rem; 
+    background-color: rgb(50, 50, 50);
+}
+
+nav, section, footer, article, aside{
+    border: 2px solid rgb(31, 219, 147);
+    border-radius: 10px;
+    margin: 2rem;
+    background-color: white;
+    padding: 1 rem;
+}
+
+article, aside{
+    width: 40%;
+    display: inline-block;
+    height: 200px;
+    background-color: rgb(141, 21, 240);
 }
