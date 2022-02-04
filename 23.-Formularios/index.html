@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script language="javascript" type="text/javascript" src="js/validarformulario.js" ></script>
+</head>
+<body>
+    <form method="post" name="registro" onsubmit="return validar(this)" action="">
+        <label>Nombre:</label>
+        <br>
+        <input type="text" id="nombre" name="nombre" size="20" >
+        <br>
+        <label>Edad:</label>
+        <br>
+        <input type="text" min="01" max="99" id="edad" name="edad" >
+        <br>
+        <label>Dirección de Correo:</label>
+        <br>
+        <input type="text" id="correo" name="correo" size="30">
+        <br>
+        <input type="submit" value="Enviar Datos" id="enviardatos" name="enviardatos">
+        <input type="reset" value="Borrar Datos" id="borrar" name="borrar">
+    </form>
+</body>
+</html>
