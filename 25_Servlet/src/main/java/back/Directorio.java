@@ -35,17 +35,25 @@ public class Directorio extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Directorio</title>");            
+            out.println("<title>Servlet Directorio</title>"
+                    + "<link rel=\"stylesheet\" href=\"css/style.css\"/>");            
             out.println("</head>");
             out.println("<body>");
             
-            String nom;
+            String nom, correo;
+            int edad;
             
             nom = request.getParameter("nombre");
+            correo = request.getParameter("email");
+            edad = Integer.parseInt(request.getParameter("edad"));
             
             out.println("<h1>Bienvenido: </h1>" + nom);
-            out.println("<br>");
-            out.println("<a href='index.html' >Regresar al Inicio</a>");
+            out.println("<br>"
+                    + "Tu edad es: " + edad);
+            out.println("<br>"
+                    + "Tu correo es: " + correo 
+                    + "<br>"
+                    + "<a href='index.html' >Regresar al Inicio</a>");
             out.println("</body>");
             out.println("</html>");
         }
