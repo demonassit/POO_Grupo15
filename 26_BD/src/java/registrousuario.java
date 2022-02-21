@@ -74,14 +74,13 @@ public class registrousuario extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            out.println("<table border=1 >"
+           out.println("<table border=1 >"
                     + "<tr>  "
                         + "<th>Num_Empleado</th>"
                         + "<th>Nombre</th>"
                         + "<th>User</th>"
                         + "<th>Password</th>"
-                    + "</tr>"
-                    + "</table>");
+                    + "</tr>");
             
             try{
                 int num_empleado;
@@ -98,6 +97,33 @@ public class registrousuario extends HttpServlet {
                 
                 set.executeUpdate(q);
                 
+                
+                String q2 = "select * from empleado";
+                
+                set = con.createStatement();
+                //objeto de consulta
+                rs = set.executeQuery(q2);
+                
+                while(rs.next()){
+                    num_empleado = rs.getInt("num_empleado");
+                    nombre = rs.getString("nombre");
+                    user = rs.getString("user");
+                    password = rs.getString("pass");
+                    
+                    
+                    out.println("<tr>"
+                         + "<td>"+num_empleado+"</td>"
+                         + "<td>"+nombre+"</td>"
+                         + "<td>"+user+"</td>"
+                         + "<td>"+password+"</td>"
+                    + "</tr>");
+                    
+                }
+                
+                 
+                    
+                 
+                out.println("</table>");
                 
                  out.println("<h1>registro Exitoso</h1>");
             
