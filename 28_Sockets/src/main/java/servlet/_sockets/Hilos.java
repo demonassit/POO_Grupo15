@@ -11,4 +11,7 @@ package servlet._sockets;
  */
 public class Hilos {
     
+    public static void main(String[] args){
+    }
+    
 }
